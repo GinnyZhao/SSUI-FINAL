@@ -1,7 +1,6 @@
 {
-  "homepage": "https://jessesbyers.github.io/covid19_world_tracker_frontend",
   "proxy": "https://2019ncov.asia",
-  "name": "covid19_world_tracker_frontend",
+  "name": "ssui-final",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
