@@ -1,0 +1,59 @@
+.Banner {
+    position: relative;
+  
+    width: 100%;
+    /* height: 500px; */
+  }
+  
+.Banner img {
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+}
+
+.text {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.left {
+    border-radius: 30px 0 0 30px;
+    background-color: lightgray;
+}
+
+.right {
+    border-radius: 0 30px 30px 0;
+    background-color: lightgray;
+}
+
+.card {
+    color: black;
+    background-color: lightgray;
+    border: none;
+    margin-left: 20px;
+}
+
+
+#SIR {
+    margin-top: 55px;
+    margin-left: 60px;
+    background-color: lightgray;
+}
+
+#country {
+    width: 90%;
+    background-color: lightgray;
+    margin-top: 80px;
+}
+
+.homeButton {
+    margin-left: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-left: 260px;
+}

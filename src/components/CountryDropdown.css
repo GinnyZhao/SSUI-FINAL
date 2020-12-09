@@ -1,0 +1,51 @@
+.countries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 25px;
+}
+
+.country {
+    display: grid;
+    grid-template-rows: 70% 5%;
+    margin-bottom: 20px;
+}
+
+.flag {
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 5px;
+    margin-bottom: 10%;
+}
+
+.none {
+    display: none;
+}
+
+.countryName{
+    text-align: center;
+}
+
+.delete {
+    display: none;
+    /* margin-top: 20px;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 12px;
+    margin-left: 25%;
+    border: none;
+    background-color: #2B4D76; */
+}
+
+.instruction {
+    margin-left: 20px;
+}
+
+.dropdown {
+    outline: none;
+    box-shadow: none;
+    margin-left: 20px;
+    width: 90%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
