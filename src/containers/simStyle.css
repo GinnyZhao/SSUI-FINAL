@@ -1,9 +1,18 @@
 .App {
   margin-top: 1%;
+
+  width: 100%;
+  height: 100%;
 }
+
+
+
+
 
 .one {
   background: lightgray;
+  margin-left: 5%;
+  width: 22%;
   float: left;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -17,6 +26,24 @@
   border-radius: 50%;
   display: inline-block;
 }
+a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 0px 95px;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 30px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+a:hover {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: 100;
+  text-decoration: underline;
+  text-decoration-thickness: 10px;
+}
+
 .circle2 {
   height: 15px;
   width: 15px;

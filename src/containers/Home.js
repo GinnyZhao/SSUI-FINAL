@@ -33,11 +33,11 @@ class Home extends Component {
                             <h4 className="card"> COVID-19 SIR Model</h4>
                             <h5 className="card"> How it works </h5>
                             <p className="card"> We created a network SIR (susceptible, infected, recovered) model to display small-scale COVID transmission. This agent-based, mechanistic version of the SIR model visualizes close connections by linking nodes together, and probabilistically chooses neighbor nodes to infect. Because COVID transmission is hard to predict, we made the infection and recovery rate editable.In addition, connections and node states can be changed. </p>
-                            <Link
+                            {/* <Link
                                 key="1"
-                                to="/">
-                                <button className="homeButton"> Explore our SIR Model </button>
-                            </Link>
+                                to="/simu"> */}
+                                <button onClick={event =>  window.location.href='https://trusting-varahamihira-144139.netlify.app/'} className="homeButton"> Explore our SIR Model </button>
+                            {/* </Link> */}
                         </div>
                     </div>
                     <br/>

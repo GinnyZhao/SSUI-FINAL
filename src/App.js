@@ -23,7 +23,7 @@ function App() {
             <Route exact path={`/new`} component={New} />
             <Route exact path={`/collection`} component={Collection} />
             <Route exact path={`/overlay`} component={Overlay} />
-            {/* <Route exact path={`/simulation`} component={Simulation} /> */}
+            {/* <Route exact path={`/simu`} component={Simulation} /> */}
             <Footer />
           </div>
         </Container>

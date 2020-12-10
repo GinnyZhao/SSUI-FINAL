@@ -190,7 +190,6 @@ class Simulation extends Component {
               source: dblNode,
               target: nodeId,
             });
-            let modData = { ...ref.state.data };
             
             ref.setState({
               data: dat
@@ -426,10 +425,16 @@ class Simulation extends Component {
       return "MediumAquaMarine";
   }
   return (
-    <div className="App" style={{fontSize: "small"}}>
-      <div className = "one" style={{height: window.innerHeight/2, width: window.innerWidth/5}}>
-      <div className = "ones" style={{height: window.innerHeight/2, width: window.innerWidth/5}}>
-      <div className = "buttons"style={{height: window.innerHeight/2, width: window.innerWidth/5}}>
+    <div>
+    {/* <div className="back" style={{ marginLeft: "5%"}}>
+       <li id="a">
+         <a href={"https://festive-wilson-5bcfd5.netlify.app/"}>Back to main page</a>
+         </li>
+    </div> */}
+    <div> 
+      <div className = "one" >
+      <div className = "ones" >
+      <div className = "buttons">
           <div><button className = "circleButton" onClick={onClickAddNode}>
               +
             </button>
@@ -503,9 +508,6 @@ class Simulation extends Component {
             />
         </div>
           
-        
-
-        
           
         <div className="graph" style={{ width: window.innerWidth/1.09}}>
           <LineChart
@@ -517,9 +519,10 @@ class Simulation extends Component {
                 strokeDasharray="3 3"
                 margin={{top: 10, bottom: 50, left: 50, right: 10}}/>
           </div>
-          
-    </div>
+          </div> 
+          </div>    
   );
+
 }
 }
 
