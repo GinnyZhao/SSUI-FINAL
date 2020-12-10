@@ -37,6 +37,7 @@ const DrawLine = (names, data, slugs, caseType) => {
         title = `COVID-19 ${caseType} cases`
     }
 
+
     let l =[] 
     data.map((d,idx) => {
         l.push(d.length)
@@ -52,6 +53,11 @@ const DrawLine = (names, data, slugs, caseType) => {
         .domain(data[i].map(d => d.dayCount))
         .range([margin.left, width - margin.right])
         .padding(padding)
+    
+    let first = data[i][0].date
+    console.log(first.toLocaleDateString())
+    
+    const subtitle = `Since ${first.toLocaleDateString()}`
     
     let l2 = []
     let m = 0
@@ -173,6 +179,13 @@ const DrawLine = (names, data, slugs, caseType) => {
         .attr('y', 40)
         .attr('text-anchor', 'middle')
         .text(title);
+    
+    titleG.append('text')
+        .attr('class', 'subtitle')
+        .attr('x', width / 2)
+        .attr('y', 70)
+        .attr('text-anchor', 'middle')
+        .text(subtitle);
 
 
 

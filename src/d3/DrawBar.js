@@ -79,17 +79,17 @@ const DrawBar = (countryName, totalCases, dailyData, id, caseType) => {
 
 
     // setting up tooltip with data labels
-    const tip = d3Tip()
-        .attr('class', 'd3-tip')
-        .offset([-10, 0])
-        .html(function(d) {
-            return "<p>" + "<span style='color:white'>" + "Day " + d.dayCount.toLocaleString('en') + "<br/>" +
-                d.date.toLocaleDateString() + "<br/>" + "</span>" +
-                "<span style='color:#BD2D28'>" + d.total.toLocaleString('en') + " Total" + "<br/>" + "</span>" +
-                "<span style='color:#E3BA22'>" + d.active.toLocaleString('en') + " Active" + "<br/>" + "</span>" +
-                "<span style='color:#A0B700'>" + d.recovered.toLocaleString('en') + " Recovered" + "<br/>" + "</span>" +
-                "<span style='color:#BA5F06'>" + d.deaths.toLocaleString('en') + " Deaths" + "</p>" 
-        })
+    // const tip = d3Tip()
+    //     .attr('class', 'd3-tip')
+    //     .offset([-10, 0])
+    //     .html(function(d) {
+    //         return "<p>" + "<span style='color:white'>" + "Day " + d.dayCount.toLocaleString('en') + "<br/>" +
+    //             d.date.toLocaleDateString() + "<br/>" + "</span>" +
+    //             "<span style='color:#BD2D28'>" + d.total.toLocaleString('en') + " Total" + "<br/>" + "</span>" +
+    //             "<span style='color:#E3BA22'>" + d.active.toLocaleString('en') + " Active" + "<br/>" + "</span>" +
+    //             "<span style='color:#A0B700'>" + d.recovered.toLocaleString('en') + " Recovered" + "<br/>" + "</span>" +
+    //             "<span style='color:#BA5F06'>" + d.deaths.toLocaleString('en') + " Deaths" + "</p>" 
+    //     })
         
 
 
@@ -105,31 +105,33 @@ const DrawBar = (countryName, totalCases, dailyData, id, caseType) => {
         .attr("preserveAspectRatio", "xMinYMid meet")
         .attr("viewBox", [0, 0, width, height])
 
-    const g = svg.append("g")
-        .attr("fill", color(caseType))
-        .selectAll('rect')
-        .data(dailyData)
-        .join("rect")
-        .attr('x', d => xScale(d.dayCount))
+    // const g = svg.append("g")
+    //     .attr("fill", color(caseType))
+    //     .selectAll('rect')
+    //     .data(dailyData)
+    //     .join("rect")
+    //     .attr('x', d => xScale(d.dayCount))
 
-        .attr("y", d => yScale(d[`${caseType}`]))
-        .attr("width", xScale.bandwidth())
-        .attr("height", d => yScale(0) - yScale(d[`${caseType}`]))
-        .attr("class", "bar")
-        .on('mouseover', tip.show)
-        .on('mouseout', tip.hide)
+    //     .attr("y", d => yScale(d[`${caseType}`]))
+    //     .attr("width", xScale.bandwidth())
+    //     .attr("height", d => yScale(0) - yScale(d[`${caseType}`]))
+    //     .attr("class", "bar")
+    //     .on('mouseover', tip.show)
+    //     .on('mouseout', tip.hide)
 
     
 
-    // const g = svg.append('path')
-    //     .attr("fill", "none")
-    //     .datum(dailyData)
-    //     // .attr('x', d => xScale(d.dayCount))
+    const g = svg.append('path')
+        .attr("fill", "none")
+        .datum(dailyData)
+        // .attr('x', d => xScale(d.dayCount))
 
-    //     .attr('stroke', color(caseType))
-    //     .attr('stroke-width', 2)
-    //     .attr('class', 'line') 
-    //     .attr('d', lineGenerator)
+        .attr('stroke', color(caseType))
+        .attr('stroke-width', 2)
+        .attr('class', 'line') 
+        .attr('d', lineGenerator)
+        // .on('mouseover', tip.show)
+        // .on('mouseout', tip.hide)
         // .attr("y", d => yScale(d[`${caseType}`]))
         // .attr("width", xScale.bandwidth())
         // .attr("height", d => yScale(0) - yScale(d[`${caseType}`]))
@@ -195,7 +197,7 @@ const DrawBar = (countryName, totalCases, dailyData, id, caseType) => {
         .attr('text-anchor', 'middle')
         .text(subtitle());
 
-    svg.call(tip);
+    // svg.call(tip);
 
 }
 
