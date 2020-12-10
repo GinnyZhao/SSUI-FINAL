@@ -14,7 +14,7 @@ const DrawLine = (names, data, slugs, caseType) => {
     const width = 960
     const height = 500
     const padding = .2
-    const margin = ({top: 80, right: 80, bottom: 80, left: 80})
+    const margin = ({top: 80, right: 100, bottom: 80, left: 80})
     const innerWidth = width - margin.left - margin.right;
     const vizName = "viz"
 
@@ -25,7 +25,17 @@ const DrawLine = (names, data, slugs, caseType) => {
 
     const xAxisLabel = "Number of Days"
     const yAxisLabel = caseType ? `Number of Cases: ${capFirst(caseType)}` : "Number of Cases"
-    const title = "COVID-19 Cases"
+    let title = ""
+    if (caseType==="deaths") {
+        title = "COVID-19 deaths"
+    }
+    else if (caseType === "daily_deaths") {
+        title = "COVID-19 daily deaths"
+        
+    }
+    else {
+        title = `COVID-19 ${caseType} cases`
+    }
 
     let l =[] 
     data.map((d,idx) => {
@@ -87,7 +97,7 @@ const DrawLine = (names, data, slugs, caseType) => {
         .text(names[idx])
         .attr("dy", ".35em")
         .attr("text-anchor", "start")
-        .attr("transform", `translate(${width - 100}, ${yScale(dat[dat.length-1][caseType])+10})`)
+        .attr("transform", `translate(${width - 90}, ${yScale(dat[dat.length-1][caseType])+10})`)
 
 
 

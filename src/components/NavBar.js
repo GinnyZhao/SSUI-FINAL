@@ -33,19 +33,19 @@ class NavBar extends Component {
               <ul class="navbar-nav-front">
                 <li class="nav-item">
                   <NavLink className="nav-link" to="/">
-                    Covid SIR Model
+                    COVID SIR Model
                   </NavLink>
                 </li>
                 <li class="nav-item">
                   <NavLink className="nav-link" to="/new">
-                    Country Data
+                    Data Visualizations
                   </NavLink>
                 </li>
-                <li class="nav-item">
+                {/* <li class="nav-item">
                   <NavLink className="nav-link" to="/">
                     What you can do 
                   </NavLink>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

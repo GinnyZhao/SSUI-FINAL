@@ -1,45 +1,10 @@
-// doesn't require redux
 
-// import React, { useEffect } from 'react';
-
-// import DrawMap from '../d3/DrawMap'
-// import MapInput from '../components/MapInput'
-
-// import { Row } from 'react-bootstrap'
-// import { Col } from 'react-bootstrap'
-// import { Card } from 'react-bootstrap'
 import React, { Component,} from "react";
 import { Link } from "react-router-dom";
 import FrontImg from "../img/landingImage.jpg";
 import SIR from "../img/SIR-unscreen.gif";
 import "./Home.css";
 import Country from "../img/country.png";
-
-
-
-// const Home = () => {
-
-//     useEffect( () => {
-//         DrawMap(); 
-//     }, [])
-
-//     return (
-//         <Row>
-//             <Col sm="12" md="3" lg="3" xl="3">
-//                 <Card>
-//                     <MapInput />
-//                 </Card>
-//             </Col>
-//             <Col sm="12" md="9" lg="9" xl="9" >
-//                 <Card className="mapviz">
-
-//                 </Card>
-//             </Col>
-//         </Row>
-//     )
-// }
-
-// export default Home
 
 
 class Home extends Component {
@@ -65,7 +30,7 @@ class Home extends Component {
                             <img id="SIR" src={SIR} alt="SIR gif"/>
                         </div>
                         <div className="col-8 right">
-                            <h4 className="card"> COVID SIR Model</h4>
+                            <h4 className="card"> COVID-19 SIR Model</h4>
                             <h5 className="card"> How it works </h5>
                             <p className="card"> We created a network SIR (susceptible, infected, recovered) model to display small-scale COVID transmission. This agent-based, mechanistic version of the SIR model visualizes close connections by linking nodes together, and probabilistically chooses neighbor nodes to infect. Because COVID transmission is hard to predict, we made the infection and recovery rate editable.In addition, connections and node states can be changed. </p>
                             <Link
@@ -85,7 +50,7 @@ class Home extends Component {
                         <div className="col-8 left">
                             <h4 className="card"> COVID-19 Cases by Country</h4>
                             <h5 className="card"> How it works </h5>
-                            <p className="card"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+                            <p className="card"> We created an interactive dashbaord to show data visualizations of COVID cases (total cases, active cases, recovered cases, daily cases) in side-by-side histograms or overlaying linegraphs. All visualizations are rendered dynamically in real time using data fetched from Johns Hopkins CSSE. </p>
                             <Link
                                 key="1"
                                 to="/new">
