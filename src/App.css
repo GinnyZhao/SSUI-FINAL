@@ -58,7 +58,7 @@ svg {
 }
 
 
-/* custom bootstrap styling */
+
 
 .card {
   margin-bottom: 1em;
@@ -67,40 +67,12 @@ svg {
 
 
 
-
-/* BAR CHART - d3 and svg styling  */
 .bar:hover {
   fill: black;
 }
 
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
-}
 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 1em;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
 
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
-}
 
 .tick text {
   fill: #635F5D;
@@ -128,49 +100,6 @@ text.subtitle {
 
 
 
-
-/* WORLD MAP: d3 map css */
-/* body {
-  margin: 0px;
-  overflow: scroll;
-}
-
-.sphere {
-  fill: #DCDCDC;
-}
-
-.country {
-  fill: #D3D3D3;
-  stroke: black;
-  stroke-width: 0.05
-}
-
-.country:hover {
-  fill: #E0FFFF
-}
-
-.country-circle:hover, circle:hover {
-  fill: #E0FFFF
-}
-
-.country-circle, circle {
-  fill-opacity: 0.4;
-  stroke: black;
-  stroke-width: 0.05;
-}
-
-.legend-title {
-  fill: #635F5D;
-  text-anchor: middle;
-}
-
-.tick-map text {
-  fill: #635F5D;
-  font-size: .75em
-} */
-
-
-/* Color: Circles, Legends, and Buttons */
 
 select {
   width: 100%
@@ -282,28 +211,6 @@ button.daily_deaths {
 }
 
 
-/* button.recoveredPerOneMillion {
-  background-color: #5C8100;
-}
-button.critical {
-  background-color: #137B80;
-}
-button.criticalPerOneMillion {
-  background-color: #42A5B3;
-}
-button.tests {
-  background-color:  #684664;
-}
-button.testsPerOneMillion {
-  background-color: #8E6C8A;
-}
-button.population {
-  background-color: #B396AD;
-}
-button.reset {
-  background-color: #7C715E;
-} */
-
 
 
 button.dark {
@@ -338,28 +245,3 @@ button.nav {
   cursor: pointer;
   text-align: center;
 }
-
-
-/* collapsible menu for MapInput on Home Page */
-/* .collapsible1, .collapsible2, .collapsible3 {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible1:hover, .collapsible2:hover, .collapsible3:hover {
-  background-color: #ccc;
-}
-
-.content1, .content2, .content3 {
-  padding: 0 18px;
-  display: block;
-  overflow: hidden;
-  background-color: #f1f1f1;
-} */

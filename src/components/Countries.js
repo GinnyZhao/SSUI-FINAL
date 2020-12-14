@@ -1,7 +1,6 @@
 import React from 'react';
 import Visual from '../d3/Visual'
 import { useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom';
 
 const Countries = ({caseType, countries}) => {
     const collection = useSelector(state => state.collection)
@@ -54,19 +53,6 @@ const Countries = ({caseType, countries}) => {
         <Visual names = {names} data = {res} caseType = {caseType} slugs = {slug_res}/>
     )
 
-    // const totalCases = () => dailyData.length === 0 ? 0 : dailyData[dailyData.length-1].Confirmed
-
-    
-
-    // return (
-    //     <NavLink to={{
-    //         pathname: `/countries/${slug}`,
-    //         slug,
-    //         countryName
-    //         }}>
-    //         <Viz countryName={countryName} totalCases={totalCases()} dailyData={parseData(dailyData, array)} caseType={caseType} slug={slug}/>
-    //     </NavLink>
-    // )
 }
 
 export default Countries

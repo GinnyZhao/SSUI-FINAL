@@ -10,7 +10,6 @@ import Show from './containers/Show'
 import Collection from './containers/Collection'
 import Container from 'react-bootstrap/Container';
 import Overlay from './containers/Overlay';
-// import Simulation from './containers/Simulation';
 
 function App() {
   return (    

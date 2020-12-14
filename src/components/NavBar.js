@@ -32,9 +32,9 @@ class NavBar extends Component {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav-front">
                 <li class="nav-item">
-                  <NavLink className="nav-link" to="/">
-                    COVID SIR Model
-                  </NavLink>
+                  {/* <NavLink className="nav-link" to="/"> */}
+                  <a href="https://trusting-varahamihira-144139.netlify.app/"> COVID SIR Model </a>
+                  {/* </NavLink> */}
                 </li>
                 <li class="nav-item">
                   <NavLink className="nav-link" to="/new">

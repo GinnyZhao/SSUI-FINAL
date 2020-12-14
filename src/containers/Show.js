@@ -1,11 +1,6 @@
-// need to add loader logic
-import data from '../components/data/data.json'
-
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 
-import Province from '../components/Province'
-import State from '../components/State'
 import Country from '../components/Country'
 
 import { Card } from 'react-bootstrap'
@@ -18,22 +13,12 @@ import { NavLink } from 'react-router-dom';
 
 
 const Show = (props) => {
-    // const cache = useSelector(state => state.cache)
-    // const collection = useSelector(state => state.collection)
-    console.log(props);
+
     const name = props.location.countryName;
-    // let nameCap = name.charAt(0).toUpperCase() + name.slice(1)
-    // if (nameCap === "United-states") {
-    //     nameCap = "United States of America";
-    // }
-    // if (nameCap === "Korea-south") {
-    //     nameCap = "Korea (South)"
-    // }
+
 
     const countryData = useSelector(state => state.countryData)
-    // let index = 0;
-    // console.log(nameCap)
-    // console.log(Object.keys(countryData[0])[0])
+
 
     let index = countryData.findIndex(obj => Object.keys(obj)[0] === name);
     console.log(index);
@@ -60,7 +45,6 @@ const Show = (props) => {
                         <Card>
                             <NavLink to='/collection'>
                                 <Country caseType={caseType} country={countryData[index]}/>
-                                {/* <Province caseType={caseType} province={provincesData[0].Country} provinceData={provincesData}/>  */}
                             </NavLink>
                         </Card>
                     </Col>
