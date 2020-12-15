@@ -25,11 +25,21 @@ const DrawBar = (countryName, totalCases, dailyData, id, caseType) => {
     const yAxisLabel = caseType ? `Number of Cases: ${capFirst(caseType)}` : "Number of Cases"
     const title = countryName
     const subtitle = () => {
-        if (dailyData.length > 0) {
-            return totalCases.toLocaleString('en') + " COVID-19 Cases Reported Since " + dailyData[0].date.toLocaleDateString()
-        } else {
-            return totalCases + " COVID-19 Cases Reported"
+        let title = ""
+        if (caseType==="deaths") {
+            title = `${max(dailyData, d => d[`${caseType}`])} COVID-19 deaths`
         }
+        else if (caseType === "daily_deaths") {
+            title = `At most ${max(dailyData, d => d[`${caseType}`])} COVID-19 daily deaths`
+            
+        }
+        else if (caseType === "daily") {
+            title = `At most ${max(dailyData, d => d[`${caseType}`])} COVID-19 daily confirmed cases`
+        }
+        else {
+            title = `${max(dailyData, d => d[`${caseType}`])} COVID-19 ${caseType} cases`
+        }
+        return `${title} since ${dailyData[0].date.toLocaleDateString()}`
     }
 
     const xScale = scaleBand()

@@ -5,15 +5,9 @@ import { NavLink } from 'react-router-dom';
 
 const Country = ({caseType, country}) => {
     const collection = useSelector(state => state.collection)
-    console.log(country)
     const countryName = Object.keys(country)[0]
-    console.log(countryName)
     const dailyData = country[countryName]
-    console.log(dailyData)
-    // console.log(collection.find(obj => obj.country === countryName)  == null)
-    console.log(collection.find(obj => obj.country === countryName)  != null)
     if (collection.find(obj => obj.country === countryName) != null) {
-        console.log("hi")
         const slug = collection.find(obj => obj.country === countryName).slug
         const totalCases = () => dailyData.length === 0 ? 0 : dailyData[dailyData.length-1].Confirmed
     
@@ -41,7 +35,6 @@ const Country = ({caseType, country}) => {
                     daily_deaths: newDeaths,
                 })
             })
-            console.log(array);
             return array
         }
 

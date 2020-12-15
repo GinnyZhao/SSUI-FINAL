@@ -4,8 +4,6 @@ import { color } from './Color'
 import "./DrawLine.css"
 
 
-
-
 const DrawLine = (names, data, slugs, caseType) => {
     console.log(names)
     console.log(data)
@@ -91,7 +89,6 @@ const DrawLine = (names, data, slugs, caseType) => {
         const s = svg.append('path')
         .attr("fill", "none")
         .datum(dat)
-        // .attr('stroke', `#${((1<<24)*Math.random()|0).toString(16)}`)
         .attr('stroke', color(caseType))
 
         .attr("class", `line country${(idx + 1).toString()}`)

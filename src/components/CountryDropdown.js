@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { NavLink } from 'react-router-dom';
 import "./CountryDropdown.css";
-import Delete from "../img/delete.png";
 
 const CountryDropdown = (props) => {
 
